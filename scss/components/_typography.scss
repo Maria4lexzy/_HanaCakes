@@ -1,0 +1,100 @@
+@use'../custom' as *;
+@use'../components/mixins' as *;
+.display-2 {
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    font-family: 'Montserrat', sans-serif;
+    .intro__heading {
+        &--title {
+            display: inline-block;
+            font-family: 'Great Vibes', cursive;
+        }
+        &--description {
+            font-size: 1rem;
+            display: block;
+            margin-top: 1.2rem;
+            text-transform: none;
+            @include media-breakpoint-up(lg) {
+                font-size: 1rem;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+// HEADING LINE
+.heading-line::before {
+    content: '';
+    width: 10rem;
+    height: 0.1rem;
+    display: block;
+    background-color: $primary;
+    margin: 0 auto;
+}
+
+.heading-line::after {
+    // content: "";
+    // width: 2rem;
+    // padding-top: 0.5rem;
+    // height: 0.2rem;
+    // display: block;
+    // background-color: $primary;
+    // margin: 0 auto;    
+    margin-bottom: 1rem;
+}
+
+// DISPLAY 3 
+.display-3 {
+    font-family: 'Poppins', sans-serif;
+    &--title {
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        display: inline-block;
+        background-image: linear-gradient(to right, $primary, $secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @include media-breakpoint-up(lg) {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.categories-products {
+    font-family: 'Montserrat', sans-serif;
+    .card {
+        &-title {
+            font-family: 'Great Vibes', cursive;
+        }
+        &-footer {
+            // font-family: 'Great Vibes', cursive;
+            font-size: 1.4rem;
+            color: white;
+            i {
+                font-size: .9rem;
+            }
+        }
+        &-text {
+            font-size: 0.9rem;
+            text-transform: none;
+            font-weight: 400;
+            @include media-breakpoint-up(lg) {
+                font-size: 1rem;
+                display: inline-block;
+            }
+        }
+    }
+    &__categories--card {
+        color: rgb(58, 48, 48);
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+// gradient
+.gradient {
+    background: linear-gradient(to left, rgba($primary, 0.95), rgba($secondary, 0.95));
+}
