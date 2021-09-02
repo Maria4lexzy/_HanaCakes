@@ -1,17 +1,31 @@
+@use'../custom' as *;
+@use'../components/mixins' as *;
 .companies{
-    padding: 0 0 5rem 0;
     &__logo-box{
-        max-width: 100%;
-        height: 5rem;
-        margin-bottom: 2rem;
-        padding: 0.5rem;
-        text-align: center;
-        position: relative;
+        // max-width: 100%;
+        // height: 5rem;
+        // margin-bottom: 2rem;
+        // padding: 0.5rem;
+        // text-align: center;
+        // position: relative;
+        // background-color: $primary;
+      
+        .card
+        {    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            border: none;
+            transition: all 0.4s;
 
-        img{
-        height: 100%;
+
+            &:hover{
           
+                box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                transition: all .5s cubic-bezier(0.1, 0.6, 0.2, .5);
+            
         }
+        }
+
+   
     }
 }
+
 
