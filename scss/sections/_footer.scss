@@ -4,133 +4,152 @@
 
 .footer {
     padding-top: 1rem;
-    background-color: $footer;
+    background-color: $off-white;
+    color: $primary;
 }
 
-// // STYLE THE CONTACT-BOX CONTENT 
-// .contact-box {
-//     position: relative;
+// STYLE THE CONTACT-BOX CONTENT
+.contact-box {
+    position: relative;
+    span {
+        i {
+            color: $primary;
+            font-size: 2.5rem;
+            margin-top: 0.6rem;
+        }
+    }
 
-//     &__icon {
-//        width: 2rem;
-//        color: $primary; 
-//        padding-top: 0.5rem;
+    &__icon {
+        width: 0.8rem;
+        stroke: $primary;
+        padding-top: 0.5rem;
 
-//        @include media-breakpoint-up(sm) {
-//         width: 4rem;
-//        }
-//     }
+        @include media-breakpoint-up(sm) {
+            width: 2rem;
+            stroke: $secondary;
+        }
+    }
 
+    &__info {
+        padding: 0.4rem;
+        font-weight: 600;
 
-//     &__info {
-//         padding: 0.4rem;
-//         font-weight: 600;
+        &--title {
+            color: $primary;
+            text-decoration: none;
+            font-size: 0.5rem;
+
+            @include media-breakpoint-up(sm) {
+                font-size: 1rem;
+            }
+        }
+
+        &--subtitle {
+            font-size: 0.8rem;
+            color: $gray-600;
+            text-decoration: none;
+
+            @include media-breakpoint-up(sm) {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+// STYLE THE SOCIAL MEDIA CONTENT
+.footer-sm {
+    a {
+        color: white;
+
+        transition: all 0.5s ease;
+
         
+            background-color: $white;
+            width: 4rem;
+            height: 4rem;
+            padding: 1rem;
+            margin-right: 0.8rem;
+            transition: 250ms ease;
+            content: "";
+            border-radius: 39px;
+            background: #a3a3a3;
+            box-shadow:  5px 5px 10px #707070,
+                         -5px -5px 10px #d6d6d6;
 
+        i {
+            top: 1rem;
+            font-size: 0.8rem;
+            color: $white;
 
-//         &--title {
-//             color: $white;
-//             text-decoration: none;
-//             font-size: 1rem;
+            @include media-breakpoint-up(sm) {
+                font-size: 1.6rem;
+            }
 
-//             @include media-breakpoint-up(sm) {
-//                 font-size: 1.4rem;
-//                }
+       
+        }
 
-//         }
+             &:hover {
+                color: $secondary;
+                background: #a3a3a3;
+                box-shadow: inset 5px 5px 10px #707070,
+                            inset -5px -5px 10px #d6d6d6;
+            }
+    }
+}
 
-//         &--subtitle {
-//             font-size: 0.8rem;
-//             color: $gray-600;
-//             text-decoration: none;
+//Infromacie & Kontatky
+.footer-list {
+    display: block;
+    list-style-type: none;
+    position: relative;
 
-//             @include media-breakpoint-up(sm) {
-//                 font-size: 1rem;
-//                }
-            
-//         }
-//     }
-// }
+    li {
+        margin-bottom: 0.4rem;
+        text-decoration: none;
 
-// // STYLE THE SOCIAL MEDIA CONTENT 
-// .footer-sm {
+        a {
+            color: $hana-gray;
+            font-weight: 500;
+            text-decoration: none;
 
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}
 
-//     a {
-//         color: $white;
+// STYLE THE COPYRIGHT  CONTENT
+.footer-bottom {
+    background-color: $gray-100;
 
-//         i {
-//             font-size: 1rem;
-//             margin-left: 1rem;
+    &__copyright {
+        color: $gray-600;
+        font-weight: 400;
 
-//             @include media-breakpoint-up(sm) {
-//                 font-size: 1.6rem;
-//                }
+        a {
+            color: $black;
+            text-decoration: none;
 
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}
 
-//         }
-//         &:hover {
-//             color: $primary;
-//         }
-//     }
-// }
+// STYLE THE BACK TO TOP BUTTON
+.back-to-top {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    right: 1.875rem;
+    bottom: 1.875rem;
+    z-index: 9999;
 
-// // STYLE THE CAMPANY INFO CONTENT 
-// .company-list {
-//     display: block;
-//     list-style-type: none;
-//     position: relative;
-
-//     li {
-//         margin-bottom: 0.5rem;
-//         text-decoration: none;
-
-//         a {
-//             color: $white;
-//             text-decoration: none;
-
-//             &:hover {
-//                 color: $primary;
-//             }
-//         }
-//     }
-// }
-
-// // STYLE THE COPYRIGHT  CONTENT 
-// .footer-bottom {
-//     background-color: $black;
-
-//     &__copyright {
-//         color: $gray-600;
-//         font-weight: 400;
-        
-
-//         a {
-//             color: $gray-300;
-//             text-decoration: none;
-
-//             &:hover {
-//                 color: $primary;
-//                 text-decoration: underline;
-             
-//             }
-//         }
-//     }
-// }
-
-
-// // STYLE THE BACK TO TOP BUTTON 
-// .back-to-top {
-//     position: fixed;
-//     width: 3rem;
-//     height: 3rem;
-//     right: 1.875rem;
-//     bottom: 1.875rem;
-//     z-index: 9999;
-
-//     i {
-//         color: $white;
-//         font-size: 1rem;
-//         @include absoluteCenter;
-//     }
-// }
+    i {
+        color: $white;
+        font-size: 1rem;
+        @include absoluteCenter;
+    }
+}
