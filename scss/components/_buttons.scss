@@ -1,5 +1,5 @@
-@use'../custom' as *;
-@use'../components/mixins' as *;
+@use '../custom' as *;
+@use '../components/mixins' as *;
 
 .btn-rounded {
     position: relative;
@@ -10,7 +10,7 @@
     white-space: nowrap;
     overflow: hidden;
     border: none;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 
     span {
         position: absolute;
@@ -21,15 +21,13 @@
         right: 5px;
         transform: translateY(-50%);
         border-radius: 50%;
-        transition:  250ms ease;
-
+        transition: 250ms ease;
     }
     i {
         color: $white;
         size: 1rem;
         line-height: 2.35rem;
         // transition: all ease-in 0.5s;
-
     }
     &:hover {
         @include gradient;
@@ -40,27 +38,27 @@
         span {
             background-color: rgba($hana-gray, 0.6);
             // transition: all ease-in 0.5s;
-
         }
     }
 
-
-   
     @include media-breakpoint-down(md) {
-        font-size: 0.8rem;    
-        padding: 0.9rem 0.5rem 0.9rem 0.25rem;
+        min-width: 6rem;
+        // margin-left: -4rem;
 
-        i{
-            size: 0.8rem;
-        }
-        span{
-            right: 0.1rem;
-        }
+        font-size: 0.8rem;
+        padding: 0.4rem 1.8rem 0.4rem 0rem;
 
+        i {
+            size: 0.75rem;
+            line-height: 1.48rem;
+        }
+        span {
+            right: 0.2rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
 }
-
-
 
 /* button effects */
 
@@ -73,41 +71,127 @@
     transition: 0.5s;
     cursor: pointer;
     text-decoration: none;
-    border-radius:  4rem 4rem;
-span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.4s;
-    &:after {
-        content: '\2192';
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: 0px;
-    
+    border-radius: 4rem 4rem;
+    span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.4s;
+        &:after {
+            content: "\2192";
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: 0px;
+        }
     }
-}
 
-&:hover span {
-    padding-right: 25px;
-    color: $white;
-}
-
-&:hover span:after {
-    transition: 0.5s;
-    opacity: 1;
-    right: 0;
-}
-&:hover{
-    @include gradient;
-    
-    transition: 0.1s;
-    i {
+    &:hover span {
+        padding-right: 25px;
         color: $white;
     }
 
+    &:hover span:after {
+        transition: 0.5s;
+        opacity: 1;
+        right: 0;
+    }
+    &:hover {
+        @include gradient;
+
+        transition: 0.1s;
+        i {
+            color: $white;
+        }
+    }
 }
 
-}
+// SOCIAL MEDIA ICONS
+.social__icons-btn {
+    $timing: 265ms;
 
+    @mixin transformScale($size: 1) {
+        transform: scale($size);
+        -ms-transform: scale($size);
+        -webkit-transform: scale($size);
+    }
+
+    .social-icons {
+        list-style: none;
+
+        li {
+            display: inline-block;
+            margin-right: 1rem;
+            position: relative;
+            font-size: 2rem;
+        }
+
+        i {
+            color: #fff;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            transition: all $timing ease-out;
+        }
+
+        .fa-facebook-f {
+            margin-left: 0.3rem;
+        }
+
+        a {
+            display: inline-block;
+            i {
+                color: $primary;
+            }
+
+            &:before {
+                @include transformScale();
+                content: "";
+                width: 60px;
+                height: 60px;
+                // background: linear-gradient(45deg, $primary, $secondary);
+                display: block;
+                transition: all $timing ease-out;
+                background: linear-gradient(145deg, #cacccf, #ffffff);
+                border-radius: 50%;
+                box-shadow: 9.91px 9.91px 15px #afb0b3, -9.91px -9.91px 15px #ffffff;
+            }
+
+            &:hover:before {
+                transform: scale(0);
+                transition: all $timing ease-in;
+            }
+
+            &:hover i {
+                @include transformScale(1.5);
+                transition: all $timing ease-in;
+            }
+
+            &:hover .fa-facebook-f {
+                color: #4267b2;
+            }
+
+            &:hover .fa-instagram {
+                background: -moz-linear-gradient(
+                    45deg,
+                    #f09433 0%,
+                    #e6683c 25%,
+                    #dc2743 50%,
+                    #cc2366 75%,
+                    #bc1888 100%
+                );
+                background: -webkit-linear-gradient(
+                    45deg,
+                    #f09433 0%,
+                    #e6683c 25%,
+                    #dc2743 50%,
+                    #cc2366 75%,
+                    #bc1888 100%
+                );
+                background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+}

@@ -30,14 +30,13 @@
             // border: none;
             // background-color: #383334;
             border-radius: 4rem;
-            color:$secondary;
+            color: $secondary;
             outline: none;
             outline-style: none;
             box-shadow: none;
             // border-color: transparent;
             border: 1px solid $secondary;
-            &:focus{
-                
+            &:focus {
             }
         }
         button {
@@ -54,117 +53,6 @@
 
             &:hover {
                 background-color: $secondary;
-            }
-        }
-    }
-
-    .subscribe-social__icons {
-        $timing: 265ms;
-
-        @mixin transformScale($size: 1) {
-            transform: scale($size);
-            -ms-transform: scale($size);
-            -webkit-transform: scale($size);
-        }
-
-        .social-icons {
-            list-style: none;
-
-            li {
-                display: inline-block;
-                margin: 0.15em;
-                position: relative;
-                font-size: 2rem;
-            }
-
-            i {
-                color: #fff;
-                position: absolute;
-                top: 1rem;
-                left: 1rem;
-                transition: all $timing ease-out;
-            }
-
-            .fa-facebook-f {
-                margin-left: 0.3rem;
-            }
-
-            a {
-                display: inline-block;
-
-                // &.i::before {
-                //     border-top-left-radius: 1rem;
-                //     border-bottom-left-radius: 1rem;
-                // }
-
-                // &.f::before {
-                //     border-top-right-radius: 1rem;
-                //     border-bottom-right-radius: 1rem;
-                // }
-
-                i {
-                    color: $primary;
-                }
-
-                &:before {
-                    @include transformScale();
-                    content: "";
-                    width: 60px;
-                    height: 60px;
-                    // background: linear-gradient(45deg, $primary, $secondary);
-                    display: block;
-                    transition: all $timing ease-out;
-                    background: linear-gradient(145deg, #cacccf, #ffffff);
-                    border-radius: 50%;
-                    box-shadow: 9.91px 9.91px 15px #afb0b3, -9.91px -9.91px 15px #ffffff;
-                }
-
-                &:hover:before {
-                    transform: scale(0);
-                    transition: all $timing ease-in;
-                }
-
-                &:hover {
-                    // background: white;
-                    // border-radius: 37%;
-                    // box-shadow: inset 9.91px 9.91px 15px #B5B6B9, inset -9.91px -9.91px 15px #FFFFFF;
-
-                    // &.f {
-                    //     border-top-right-radius: 1rem;
-                    //     border-bottom-right-radius: 1rem;
-                    // }
-                }
-
-                &:hover i {
-                    @include transformScale(1.8);
-                    transition: all $timing ease-in;
-                }
-
-                &:hover .fa-facebook-f {
-                    color: #4267b2;
-                }
-
-                &:hover .fa-instagram {
-                    background: -moz-linear-gradient(
-                        45deg,
-                        #f09433 0%,
-                        #e6683c 25%,
-                        #dc2743 50%,
-                        #cc2366 75%,
-                        #bc1888 100%
-                    );
-                    background: -webkit-linear-gradient(
-                        45deg,
-                        #f09433 0%,
-                        #e6683c 25%,
-                        #dc2743 50%,
-                        #cc2366 75%,
-                        #bc1888 100%
-                    );
-                    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
             }
         }
     }

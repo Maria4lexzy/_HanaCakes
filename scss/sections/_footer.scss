@@ -1,7 +1,6 @@
 @use '../custom' as *;
 @use '../components/mixins' as *;
 
-
 .footer {
     padding-top: 1rem;
     background-color: $off-white;
@@ -10,29 +9,12 @@
 
 // STYLE THE CONTACT-BOX CONTENT
 .contact-box {
-    position: relative;
-    span {
-        i {
-            color: $primary;
-            font-size: 2.5rem;
-            margin-top: 0.6rem;
-        }
-    }
-
-    &__icon {
-        width: 0.8rem;
-        stroke: $primary;
-        padding-top: 0.5rem;
-
-        @include media-breakpoint-up(sm) {
-            width: 2rem;
-            stroke: $secondary;
-        }
-    }
-
     &__info {
-        padding: 0.4rem;
         font-weight: 600;
+        i {
+            color: $secondary;
+            font-size: 1.3rem;
+        }
 
         &--title {
             color: $primary;
@@ -58,67 +40,45 @@
 
 // STYLE THE SOCIAL MEDIA CONTENT
 .footer-sm {
-    a {
-        color: white;
+    background-color: $secondary;
 
-        transition: all 0.5s ease;
-
-        
-            background-color: $white;
-            width: 4rem;
-            height: 4rem;
-            padding: 1rem;
-            margin-right: 0.8rem;
-            transition: 250ms ease;
-            content: "";
-            border-radius: 39px;
-            background: #a3a3a3;
-            box-shadow:  5px 5px 10px #707070,
-                         -5px -5px 10px #d6d6d6;
-
-        i {
-            top: 1rem;
-            font-size: 0.8rem;
-            color: $white;
-
-            @include media-breakpoint-up(sm) {
-                font-size: 1.6rem;
+    .social__icons-btn {
+        a {
+            i {
+                color: $white;
             }
 
-       
+            &:before {
+                background: linear-gradient(145deg, #a8509f, #c85fbd);
+                border-radius: 50%;
+                box-shadow: 9.91px 9.91px 15px #9f4c96, -9.91px -9.91px 15px #d766cc;
+            }
         }
-
-             &:hover {
-                color: $secondary;
-                background: #a3a3a3;
-                box-shadow: inset 5px 5px 10px #707070,
-                            inset -5px -5px 10px #d6d6d6;
-            }
     }
 }
 
 //Infromacie & Kontatky
-.footer-list {
-    display: block;
-    list-style-type: none;
-    position: relative;
+.footer-info {
+    .footer-list {
+        list-style-type: none;
+        // position: relative;
 
-    li {
-        margin-bottom: 0.4rem;
-        text-decoration: none;
-
-        a {
-            color: $hana-gray;
-            font-weight: 500;
+        li {
+            margin-bottom: 0.4rem;
             text-decoration: none;
 
-            &:hover {
-                color: $primary;
+            a {
+                color: $hana-gray;
+                font-weight: 500;
+                text-decoration: none;
+
+                &:hover {
+                    color: $primary;
+                }
             }
         }
     }
 }
-
 // STYLE THE COPYRIGHT  CONTENT
 .footer-bottom {
     background-color: $gray-100;

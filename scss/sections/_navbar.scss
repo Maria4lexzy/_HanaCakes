@@ -1,46 +1,43 @@
-@use'../custom' as *;
-@use'../components/mixins' as *;
+@use '../custom' as *;
+@use '../components/mixins' as *;
 
-.navbar{
+.navbar {
     padding-top: 12px;
     padding-bottom: 12px;
-    transition: all .4s cubic-bezier(0.1, 0.6, 0.2, .5);
-    background-color: rgba(33,3,3,0.1);
+    transition: all 0.4s cubic-bezier(0.1, 0.6, 0.2, 0.5);
+    background-color: rgba(33, 3, 3, 0.1);
 
-     .navbar-brand{
-        font-family: 'Great Vibes', cursive;
+    .navbar-brand {
+        font-family: "Alex Brush", cursive;
+        // font-family: "Dancing Script", cursive;
         font-size: 2.5rem;
         font-weight: 400;
         padding: 0 0.8rem;
     }
-    .nav-link{
+    .nav-link {
         font-size: 1.2rem;
         font-weight: 600;
     }
-   
-      &.active{
-    @include gradient;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    box-shadow:  0 .5rem 1rem rgba($black, .15);
- }
-    
 
+    &.active {
+        @include gradient;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
+    }
 }
-
 
 @include media-breakpoint-down(md) {
-   
-.navbar{
-    @include gradient;
+    .navbar {
+        @include gradient;
 
-    .navbar-brand{
-        font-size: 1.5rem;
-
-    }
-    .nav-link,a {
-        font-size: .8rem;
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+        .nav-link,
+        a {
+            font-size: 0.75rem;
+            margin-top: 0.5rem;
+        }
     }
 }
-}
-
