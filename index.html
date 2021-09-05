@@ -19,22 +19,26 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark  menu  fixed-top">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+      </button> -->
+        <button onclick="toggleBtnEffect()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+ aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
+    </button>
       <a class=" navbar-brand mx-auto" href="#">Hana Cakes </a>
 
       <div class="collapse navbar-collapse text-uppercase" id="navbar">
         <div class="navbar-nav  mx-auto">
-          <a class="nav-link active" aria-current="page" href="#">E-shop</a>
-          <a class="nav-link" href="#">Blog</a>
-          <a class="nav-link" href="#">ČASTÉ OTÁZKY</a>
-          <a class="nav-link" href="#">Kontakt</a>
+          <a class="nav-link active" aria-current="page" href="/EShop.html">E-shop</a>
+          <a class="nav-link" href="/Blog.html">Blog</a>
+          <a class="nav-link" href="/FAQ.html">ČASTÉ OTÁZKY</a>
+          <a class="nav-link" href="/Contact.html">Kontakt</a>
         </div>
       </div>
 
-      <div class="navbar-nav sticky-top">
+      <div class="navbar-nav ">
         <button type="button" class="rounded-pill nav-button btn-rounded">0.00 £ (0)
           <span>
             <i class="fas fa-shopping-cart"></i>
@@ -49,7 +53,7 @@
   <!-- INTRO SECTION -->
   <section class="intro-section my-0">
     <div class="container">
-      <div class="row align-items-center text-white ">
+      <div class="row align-items-center text-center text-md-start text-white ">
         <!-- Text Intro -->
         <div class="col-md-6 intros ">
           <h1 class=" intro__heading display-2">
@@ -95,7 +99,7 @@
             demoralized.
           </p>
           <div class="my-5"><a href="#" class=" btn-arrow "> <span>
-                Shop Now &ensp;
+               Visit Our E-shop&ensp;
               </span> <i class="fas fa-store"></i></a>
             </div>
         </div>
@@ -176,7 +180,7 @@ background-attachment: fixed;
         </div>
       </div>
       <div class="row text-center">
-        <div class="col-md-3 my-2">
+        <div class="col-md-3 mb-4">
           <div class="companies__logo-box  ">
             <div class="card " style="border-bottom:
               rgb(182, 133, 247) 5px solid;">
@@ -184,7 +188,7 @@ background-attachment: fixed;
             </div>
           </div>
         </div>
-        <div class="col-md-3 my-2">
+        <div class="col-md-3 mb-4">
           <div class="companies__logo-box  ">
             <div class="card" style="border-bottom:
               rgb(226, 64, 43) 5px solid;">
@@ -192,7 +196,7 @@ background-attachment: fixed;
             </div>
           </div>
         </div>
-        <div class="col-md-3 my-2">
+        <div class="col-md-3 mb-4">
           <div class="companies__logo-box">
             <div class="card" style="border-bottom:
               rgb(226, 116, 43) 5px solid;">
@@ -200,7 +204,7 @@ background-attachment: fixed;
             </div>
           </div>
         </div>
-        <div class="col-md-3 my-2">
+        <div class="col-md-3 mb-4">
           <div class="companies__logo-box">
             <div class="card " style="border-bottom:
               rgb(226, 214, 43) 5px solid;">
@@ -219,7 +223,7 @@ background-attachment: fixed;
         <span><i class="fas fa-phone-alt"></i></span>
         <div class=" ">
           
-          <a href="#" class="contact-box__info--title">+1 728365413</a>
+          <a href="#" class="contact-box__info--title">+421949620504</a>
           <p class="contact-box__info--subtitle">  Mon-Fri 9am-6pm</p>
       </div>
       </div>
@@ -236,7 +240,7 @@ background-attachment: fixed;
         <a href="#" class="contact-box__info--title">Pod Švabľovkou 26 </a>
         <p class="contact-box__info--subtitle">Sabinov, 083 01
           Slovensko</p>
-      </div>
+      </div> 
     </div>
     </div>
   </div>
@@ -259,16 +263,16 @@ background-attachment: fixed;
     </div>
   </div>
     <!-- INFO -->
-    <div class="row mt-5 container text-center footer-info">
+    <div class="row mt-5 container text-center  footer-info">
       <div class="col-md-4 order-3 order-md-1 mt-5">
         <img src="/assets/images/footer_hana2.png" alt="footer-image" height="auto" width="100%"/>
       </div>
-      <div class="col-md-4 order-1 order-md-2">
+      <div class="col-md-4 order-1 order-md-2 mt-2">
         <h2 class="fw-bold  cursive-heading mb-0 ">
           Informacie
         </h2>
-        <hr class="bg-dark d-inline-block mb-4 mt-2"  style="width: 6rem; height: .1rem;">
-            <ul class="list-inline footer-list">
+        <hr class="bg-dark d-inline-block mb-2 mt-1"  style="width: 6rem; height: .1rem;">
+            <ul class="list-inline footer-list ">
               <li><a href="#">Tvoja Objednávka</a></li>
               <li><a href="#">Postup objednávky</a></li>
               <li><a href="#">Ochrana osobných údajov</a></li>
@@ -277,16 +281,14 @@ background-attachment: fixed;
               <li><a href="#">Zoznam alergénov</a></li>
             </ul>
       </div>
-      <div class="col-md-4 order-2 order-md-3">
-        <h5 class="fw-bold  cursive-heading">
+      <div class="col-md-4 order-2 order-md-3 mt-2">
+        <h2 class="fw-bold  cursive-heading mb-0">
           Kotaktuj Hanu
-        </h5>
-        <hr class="bg-dark d-inline-block mb-4 mt-2"  style="width: 6rem; height: .1rem;">
+        </h2>
+        <hr class="bg-dark d-inline-block mb-2 mt-1"  style="width: 6rem; height: .1rem;">
         <ul class="list-inline footer-list">
-
               <li><a href="#"><span><i class="far fa-envelope-open"></i></span>&ensp;info@hanacakes.sk</a></li>
               <li><a href="#"><span><i class="fas fa-phone"></i></span>&ensp;+42 193 44523</a></li>
-
             </ul>
       </div>   
     

@@ -12,22 +12,22 @@
     &__info {
         font-weight: 600;
         i {
-            color: $secondary;
+            color: $primary;
             font-size: 1.3rem;
         }
 
         &--title {
             color: $primary;
             text-decoration: none;
-            font-size: 0.5rem;
+            font-size: 0.9rem;
 
             @include media-breakpoint-up(sm) {
-                font-size: 1rem;
+                font-size: 1.2rem;
             }
         }
 
         &--subtitle {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: $gray-600;
             text-decoration: none;
 
@@ -40,7 +40,7 @@
 
 // STYLE THE SOCIAL MEDIA CONTENT
 .footer-sm {
-    background-color: $secondary;
+    background-color: $primary;
 
     .social__icons-btn {
         a {
@@ -49,9 +49,9 @@
             }
 
             &:before {
-                background: linear-gradient(145deg, #a8509f, #c85fbd);
+                background: linear-gradient(145deg, #b73047, #f7405f);
                 border-radius: 50%;
-                box-shadow: 9.91px 9.91px 15px #9f4c96, -9.91px -9.91px 15px #d766cc;
+                box-shadow: 9.91px 9.91px 15px #b73047, -9.91px -9.91px 15px #f7405f;
             }
         }
     }
@@ -64,7 +64,7 @@
         // position: relative;
 
         li {
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.1rem;
             text-decoration: none;
 
             a {

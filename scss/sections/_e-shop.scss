@@ -1,10 +1,32 @@
-@use'../custom' as *;
-@use'../components/mixins' as *;
+@use '../custom' as *;
+@use '../components/mixins' as *;
+.sticky.is-sticky {
+    @include gradient;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 4rem;
+    z-index: 1000;
+    width: 100%;
+    padding: 1.5rem;
+    transition: all 0.5s;
+    text-align: center;
+    content: "kdkk";
+
+    @include media-breakpoint-down(md) {
+        top: 3rem;
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+    @include media-breakpoint-up(md) {
+    }
+}
+
 .categories-products {
     .card {
         background-color: white;
         border: none;
-        transition: all .5s;
+        transition: all 0.5s;
         cursor: pointer;
         box-shadow: 1px -2px 3px -2px rgba(122, 122, 122, 0.89), 0 5px 5px rgba(0, 0, 0, 0.22);
     }
@@ -13,7 +35,7 @@
     }
     .card:hover {
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-        transition: all .2s cubic-bezier(0.1, 0.6, 0.2, .5);
+        transition: all 0.2s cubic-bezier(0.1, 0.6, 0.2, 0.5);
     }
     .card:hover::after {
         transition: 0.5s;
@@ -26,12 +48,13 @@
         top: 505px;
         z-index: 1000;
         text-align: center;
-        transition: all .5s;
+        transition: all 0.5s;
     }
 }
 
 .sticky-categories {
-    .sticky-wrapper {}
+    .sticky-wrapper {
+    }
     .sticky {
         // @include gradient;
         background-color: white;
@@ -41,7 +64,7 @@
         top: 90px;
         z-index: 1000;
         text-align: center;
-        transition: all .5s;
+        transition: all 0.5s;
         box-shadow: 1px -2px 3px -2px rgba(122, 122, 122, 0.89), 0 5px 5px rgba(0, 0, 0, 0.22);
         .accordion {
             &-button {

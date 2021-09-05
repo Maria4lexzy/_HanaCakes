@@ -11160,7 +11160,7 @@ textarea.form-control-lg {
   .btn-rounded {
     min-width: 6rem;
     font-size: 0.8rem;
-    padding: 0.4rem 1.8rem 0.4rem 0rem;
+    padding: 0.5rem 1.9rem 0.5rem 0.6rem;
   }
   .btn-rounded i {
     size: 0.75rem;
@@ -11435,21 +11435,21 @@ textarea.form-control-lg {
   font-weight: 600;
 }
 .contact-box__info i {
-  color: #bb59b1;
+  color: #d73853;
   font-size: 1.3rem;
 }
 .contact-box__info--title {
   color: #d73853;
   text-decoration: none;
-  font-size: 0.5rem;
+  font-size: 0.9rem;
 }
 @media (min-width: 576px) {
   .contact-box__info--title {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 .contact-box__info--subtitle {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #6c757d;
   text-decoration: none;
 }
@@ -11460,22 +11460,22 @@ textarea.form-control-lg {
 }
 
 .footer-sm {
-  background-color: #bb59b1;
+  background-color: #d73853;
 }
 .footer-sm .social__icons-btn a i {
   color: #fff;
 }
 .footer-sm .social__icons-btn a:before {
-  background: linear-gradient(145deg, #a8509f, #c85fbd);
+  background: linear-gradient(145deg, #b73047, #f7405f);
   border-radius: 50%;
-  box-shadow: 9.91px 9.91px 15px #9f4c96, -9.91px -9.91px 15px #d766cc;
+  box-shadow: 9.91px 9.91px 15px #b73047, -9.91px -9.91px 15px #f7405f;
 }
 
 .footer-info .footer-list {
   list-style-type: none;
 }
 .footer-info .footer-list li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.1rem;
   text-decoration: none;
 }
 .footer-info .footer-list li a {
@@ -11559,10 +11559,9 @@ textarea.form-control-lg {
 }
 
 .navbar {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   transition: all 0.4s cubic-bezier(0.1, 0.6, 0.2, 0.5);
-  background-color: rgba(33, 3, 3, 0.1);
 }
 .navbar .navbar-brand {
   font-family: "Alex Brush", cursive;
@@ -11576,9 +11575,79 @@ textarea.form-control-lg {
 }
 .navbar.active {
   background: linear-gradient(to left, rgba(215, 56, 83, 0.95), rgba(187, 89, 177, 0.95));
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.navbar .navbar-toggler {
+  border: none;
+  outline: none;
+  outline-style: none;
+  box-shadow: none;
+}
+.navbar .animated-icon2 {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.navbar .animated-icon2 span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  background: #e3f2fd;
+}
+.navbar .animated-icon2 span:nth-child(1) {
+  top: 0px;
+}
+.navbar .animated-icon2 span:nth-child(2), .navbar .animated-icon2 span:nth-child(3) {
+  top: 10px;
+}
+.navbar .animated-icon2 span:nth-child(4) {
+  top: 20px;
+}
+.navbar .animated-icon2.open span:nth-child(1) {
+  top: 11px;
+  width: 0%;
+  left: 50%;
+}
+.navbar .animated-icon2.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.navbar .animated-icon2.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.navbar .animated-icon2.open span:nth-child(4) {
+  top: 11px;
+  width: 0%;
+  left: 50%;
 }
 
 @media (max-width: 767.98px) {
@@ -11643,6 +11712,26 @@ textarea.form-control-lg {
   text-transform: capitalize;
 }
 
+.sticky.is-sticky {
+  background: linear-gradient(to left, rgba(215, 56, 83, 0.95), rgba(187, 89, 177, 0.95));
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 4rem;
+  z-index: 1000;
+  width: 100%;
+  padding: 1.5rem;
+  transition: all 0.5s;
+  text-align: center;
+  content: "kdkk";
+}
+@media (max-width: 767.98px) {
+  .sticky.is-sticky {
+    top: 3rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}
 .categories-products .card {
   background-color: white;
   border: none;
