@@ -1,9 +1,8 @@
-@use '../custom' as *;
-@use '../components/mixins' as *;
-
+@use "../custom" as *;
+@use "../components/mixins" as *;
 
 .get-started {
-    padding: 4rem 0;
+    padding: 2rem 0;
     background-color: $gray-200;
 }
 
@@ -20,11 +19,10 @@
         margin-bottom: 0.7rem;
 
         li {
-            
             font-weight: 600;
             margin-right: 0.5rem;
             font-size: 1rem;
-            i{
+            i {
                 font-size: 1.2rem;
                 padding-right: 2rem;
             }
@@ -32,7 +30,7 @@
     }
 }
 
-// FORM CONTENT 
+// FORM CONTENT
 .form {
     padding: 3rem;
 
@@ -40,6 +38,7 @@
         border: none;
         color: $white;
         text-transform: capitalize;
+        font-weight: 600;
 
         a {
             color: $white;

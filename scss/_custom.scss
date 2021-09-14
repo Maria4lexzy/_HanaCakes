@@ -4,8 +4,7 @@ $pink-light: #ffcdcd;
 $hana-gray: #424242;
 $off-white: #f2eaef;
 $purple: #bb59b1; //7851a9
-$footer: rgb(52, 25, 50)
-;
+$footer: rgb(52, 25, 50);
 //CUSTOM WHITE AND GRAY COLORS
 $white: #fff;
 $gray-100: #f8f9fa;
@@ -29,17 +28,11 @@ $accordion-icon-width: 1.875rem;
 $accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z'/> <path d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z'/></svg>");
 $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z'/>  <path d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z'/></svg>");
 $accordion-button-focus-border-color: none;
-$accordion-button-focus-border-color:none;
 $accordion-button-focus-box-shadow: none;
-// $accordion-bg:                            $body-bg !default;
-// $accordion-border-width:                  $border-width !default;
-// $accordion-border-color:                  rgba($black, .125) !default;
-// $accordion-border-radius:                 $border-radius !default;
-// $accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width) !default;
-// $accordion-body-padding-y:                $accordion-padding-y !default;
-// $accordion-body-padding-x:                $accordion-padding-x !default;
-// $accordion-button-padding-y:              $accordion-padding-y !default;
-// $accordion-button-padding-x:              $accordion-padding-x !default;
-// $accordion-button-color:                  $accordion-color !default;
-// $accordion-button-bg:                     $accordion-bg !default;
+$accordion-border-width: 0;
+// FORM SELECT OVERRIDES
+$form-select-focus-border-color: none;
+$form-select-focus-width: none;
+$form-select-focus-box-shadow: none;
+
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

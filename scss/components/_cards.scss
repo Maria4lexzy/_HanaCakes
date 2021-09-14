@@ -1,0 +1,36 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.card {
+	border: none;
+	transition: all 0.5s;
+	border-radius: 0%;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+	&-footer {
+		border-color: transparent;
+		color: $white;
+		font-weight: 800;
+		font-size: 1rem;
+		font-family: "Dancing Script", cursive;
+
+		i {
+			color: $white;
+		}
+	}
+	&-body {
+		padding: 2rem;
+	}
+	&-title {
+		color: $primary;
+		font-weight: 800;
+		font-family: "Dancing Script", cursive;
+	}
+	&:hover {
+		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+		transition: all 0.5s cubic-bezier(0.1, 0.6, 0.2, 0.5);
+		&::after {
+			transition: 1s;
+		}
+	}
+}

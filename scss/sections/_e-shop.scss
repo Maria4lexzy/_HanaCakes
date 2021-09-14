@@ -1,118 +1,98 @@
-@use '../custom' as *;
-@use '../components/mixins' as *;
+@use "../custom" as *;
+@use "../components/mixins" as *;
+.intro-section {
+    padding-top: 5rem;
+}
+// class added with javascript when client scrolls
 .sticky.is-sticky {
-    @include gradient;
     position: fixed;
     left: 0;
     right: 0;
     top: 4rem;
     z-index: 1000;
     width: 100%;
-    padding: 1.5rem;
-    transition: all 0.5s;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     text-align: center;
-    content: "kdkk";
-
-    @include media-breakpoint-down(md) {
-        top: 3rem;
-        padding: 0.8rem;
-        font-size: 1rem;
+    padding: 0rem;
+    background-color: white;
+    .accordion-item {
+        transition: all 0.4s;
+        padding-bottom: 0.4rem;
     }
-    @include media-breakpoint-up(md) {
-    }
-}
-
-.categories-products {
-    .card {
-        background-color: white;
-        border: none;
-        transition: all 0.5s;
-        cursor: pointer;
-        box-shadow: 1px -2px 3px -2px rgba(122, 122, 122, 0.89), 0 5px 5px rgba(0, 0, 0, 0.22);
-    }
-    .card-footer {
-        border-color: transparent;
-    }
-    .card:hover {
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-        transition: all 0.2s cubic-bezier(0.1, 0.6, 0.2, 0.5);
-    }
-    .card:hover::after {
-        transition: 0.5s;
-    }
-    .sticky-sidebar {
-        background-color: white;
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 505px;
-        z-index: 1000;
-        text-align: center;
-        transition: all 0.5s;
-    }
-}
-
-.sticky-categories {
-    .sticky-wrapper {
-    }
-    .sticky {
-        // @include gradient;
-        background-color: white;
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 90px;
-        z-index: 1000;
-        text-align: center;
-        transition: all 0.5s;
-        box-shadow: 1px -2px 3px -2px rgba(122, 122, 122, 0.89), 0 5px 5px rgba(0, 0, 0, 0.22);
-        .accordion {
-            &-button {
-                color: $primary;
-                background-color: white;
-                // border: none;
-                border-radius: 0px !important;
-            }
-            &-flush {
-                color: $primary;
-                background-color: white;
-                box-shadow: none;
+    .categories__accordion {
+        &-btn {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            @include media-breakpoint-down(sm) {
+                font-size: 0.6rem;
             }
         }
-    }
-    .accordion {
-        &-flush {
-            border-radius: 5px;
-            box-shadow: 1px -2px 3px -2px rgba(122, 122, 122, 0.89), 0 5px 5px rgba(0, 0, 0, 0.22);
-        }
-        &-button {
-            border-radius: 10px;
-            font-weight: 700;
-            color: $primary;
-            padding: 0.8rem;
-        }
-        &-button {
-            padding: 0.8rem;
-            margin-bottom: 0.5rem;
-        }
+
         &-body {
-            padding: 0.1rem;
-        }
-    }
-    &__list {
-        // position: relative;
-        list-style-type: none;
-        li {
-            font-weight: 600;
-            font-size: 1rem;
-            padding: 0.4rem 0;
-            a {
-                text-decoration: none;
-                color: $primary;
-                &:hover {
-                    color: $secondary;
+            padding: 0rem;
+            li {
+                @include media-breakpoint-down(md) {
+                    font-size: 0.8rem;
                 }
             }
         }
     }
+    @include media-breakpoint-down(md) {
+        top: 3rem;
+    }
+}
+.categories__accordion {
+    transition: all 0.4s;
+
+    .accordion-item {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        border-width: 0;
+    }
+    &-btn {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: $primary;
+        @include media-breakpoint-down(md) {
+            font-size: 0.7rem;
+        }
+    }
+    &-body {
+        padding: 1rem;
+    }
+    &-list {
+        a {
+            text-decoration: none;
+        }
+        @include media-breakpoint-down(md) {
+            font-size: 0.8rem;
+        }
+    }
+}
+.products {
+    // .card {
+    //     background-color: white;
+    //     border: none;
+    //     transition: all 0.5s;
+    //     box-shadow: 1px -2px 3px -2px rgba(122, 122, 122, 0.89), 0 5px 5px rgba(0, 0, 0, 0.22);
+    //     &-footer {
+    //         border-color: transparent;
+    //         color: $white;
+    //         font-weight: 800;
+    //         font-size: 0.9rem;
+
+    //         font-family: "Dancing Script", cursive;
+
+    //         i {
+    //             color: $white;
+    //         }
+    //     }
+    //     &:hover {
+    //         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    //         transition: all 0.2s cubic-bezier(0.1, 0.6, 0.2, 0.5);
+    //     }
+    //     &:hover::after {
+    //         transition: 0.5s;
+    //     }
+    // }
 }

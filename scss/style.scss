@@ -1,22 +1,23 @@
-
 @use "custom" as *;
 
 //Component imports
-@use 'components/animations';
-@use 'components/buttons';
-@use 'components/mixins';
-@use 'components/typography';
+@use "components/animations";
+@use "components/buttons";
+@use "components/mixins";
+@use "components/typography";
+@use "components/modals.scss";
+@use "components/cards.scss";
 
 //Section imports
-@use 'sections/collaboration-companies';
-@use 'sections/faq';
-@use 'sections/footer';
-@use 'sections/intro-section';
-@use 'sections/navbar';
-@use 'sections/social';
-@use 'sections/testimonials';
-@use 'sections/services-section';
-@use 'sections/contact';
-@use 'sections/e-shop';
-@use 'sections/index.scss';
-
+@use "sections/collaboration-companies";
+@use "sections/faq";
+@use "sections/footer";
+@use "sections/intro-section";
+@use "sections/navbar";
+@use "sections/social";
+@use "sections/testimonials";
+@use "sections/services-section";
+@use "sections/contact";
+@use "sections/e-shop";
+@use "sections/index.scss";
+@use "sections/blog.scss";

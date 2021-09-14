@@ -1,6 +1,6 @@
-@use '../custom' as *;
-@use '../components/mixins' as *;
-
+@use "../custom" as *;
+@use "../components/mixins" as *;
+//rounded gradiant button with white background icon
 .btn-rounded {
     position: relative;
     padding: 0.9rem 4.37rem 0.9rem 1.25rem;
@@ -27,17 +27,13 @@
         color: $white;
         size: 1rem;
         line-height: 2.35rem;
-        // transition: all ease-in 0.5s;
     }
     &:hover {
         @include gradient;
         color: $white;
-        // transition: all ease 0.4s;
-        // transition: all ease-in 0.5s;
 
         span {
             background-color: rgba($hana-gray, 0.6);
-            // transition: all ease-in 0.5s;
         }
     }
 
@@ -106,8 +102,8 @@
         }
     }
 }
-
-// SOCIAL MEDIA ICONS
+//
+// SOCIAL MEDIA BUTTONS
 .social__icons-btn {
     $timing: 265ms;
 
@@ -196,3 +192,5 @@
         }
     }
 }
+
+//Rounded buttons primary and outline-primary

@@ -1,0 +1,153 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.modal {
+	z-index: 9999;
+	&-header {
+		h5 {
+			font-weight: 800;
+			font-size: 2.2rem;
+
+			color: $primary;
+			font-family: "Dancing Script", cursive;
+		}
+	}
+	// column hover on table
+	&:not(.nohover) tbody tr:hover {
+		background-color: #dee2e644;
+	}
+
+	&-body {
+		padding-top: 2rem;
+	}
+	&-footer {
+		.btn.rounded-pill {
+			border: 2px solid;
+			font-weight: 700;
+			transition: 0.4s;
+			min-width: 5rem;
+			padding: 1.5rem;
+			padding: 0.5rem 1.5rem;
+			// &.btn-outline-primary {
+			//     border-color: $primary;
+			// }
+			&.btn-primary {
+				border-color: $primary;
+				i {
+					padding: 0.5rem;
+				}
+			}
+			&:hover {
+				background-color: $secondary;
+				border-color: $secondary;
+				border: 2px solid $secondary;
+			}
+		}
+	}
+
+	//CUSTOMIZE CAKE MODAL CONTENT STYLING
+	.custom-cake {
+		font-weight: 600;
+
+		// hover effect for table
+		&-table {
+			overflow: hidden;
+			font-size: 0.9rem;
+
+			td,
+			th {
+				padding: 10px;
+				position: relative;
+				outline: 0;
+				z-index: 3;
+			}
+			td:hover {
+				background-color: $gray-400;
+				z-index: 3;
+			}
+
+			td:hover::after {
+				z-index: 2;
+			}
+		}
+		// form style
+		&-form {
+			select {
+				margin-bottom: 0.5rem;
+				border-color: transparent;
+				padding: 1.2rem 1rem;
+				cursor: pointer;
+
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+				&:focus {
+					box-shadow: 0px -1px 2px -1px rgba(122, 122, 122, 0.4), 0 5px 5px rgba(0, 0, 0, 0.22);
+					border-color: $secondary;
+				}
+				&:hover {
+					box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+					transition: all 0.5s cubic-bezier(0.1, 0.6, 0.2, 0.5);
+					&::after {
+						transition: 1s;
+					}
+				}
+				option {
+					color: $secondary;
+				}
+
+				@include media-breakpoint-down(md) {
+					padding: 0.8rem;
+				}
+			}
+			label {
+				font-weight: 700;
+				color: $primary;
+				margin-top: 2rem;
+				margin-bottom: 0.8rem;
+				font-size: 1.3rem;
+				@include media-breakpoint-down(md) {
+					padding: 0.1rem;
+					margin-top: 0.4rem;
+				}
+			}
+		}
+	}
+
+	.cake-info {
+		.price {
+			font-size: 2.5rem;
+			color: $secondary;
+		}
+	}
+}
+
+// INPUT GROUP STYLES
+.input-group {
+	color: $primary;
+	input {
+		font-weight: 800;
+		border-color: $secondary;
+		color: $secondary;
+		width: 20%;
+		box-shadow: none;
+		&[type="number"]::-webkit-inner-spin-button,
+		&[type="number"]::-webkit-outter-spin-button {
+			-webkit-appearance: none;
+		}
+	}
+
+	button {
+		background-color: $secondary;
+		border-radius: 20%;
+		color: $white;
+		transition: 0.4s;
+		&:hover {
+			background-color: $primary;
+			color: $white;
+		}
+		&:focus {
+			box-shadow: none;
+		}
+	}
+}
