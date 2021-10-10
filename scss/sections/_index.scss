@@ -1,21 +1,15 @@
-@use '../custom'as *;
-@use '../components/mixins'as *;
-
+@use "../custom" as *;
+@use "../components/mixins" as *;
+.home-intro {
+    max-height: 80vh;
+}
 .first-eshop {
-    // background-image: url("/assets/images/background.png");
-    // background-color: rgba(rgb(32, 32, 32),  0.5);
-    // background-repeat: no-repeat, repeat;
-    // background-size: cover;
-    // background-position: center center;
-    // background-attachment: fixed;
     height: 100%;
 
     p {
         font-weight: 600;
         // text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
         font-size: 1rem;
-        // color: #FFFFFF;
-        // font-family: 'Heebo', sans-serif;
     }
 }
 
@@ -25,18 +19,16 @@
         padding-top: 4rem;
     }
 
-    .subscribe-social__form {
+    &__form {
         input {
-            // border: none;
-            // background-color: #383334;
             border-radius: 4rem;
             color: $secondary;
-            outline: none;
-            outline-style: none;
-            box-shadow: none;
-            // border-color: transparent;
-            border: 1px solid $secondary;
             &:focus {
+                outline: none;
+                outline-style: none;
+                box-shadow: none;
+                border-color: transparent;
+                border: 1px solid $secondary;
             }
         }
         button {
@@ -44,16 +36,56 @@
             border-top-right-radius: 1rem;
             border-bottom-right-radius: 1rem;
             border: none;
-            background-color: $secondary;
             color: white;
-            font-weight: 600;
             padding: 0.8rem 2rem;
-            transition: all 0.4s;
-            border: 1px solid $secondary;
-
+            border: 1px solid $primary;
+            transition: 0.5s;
+            @include gradient;
             &:hover {
-                background-color: $secondary;
+                @include gradient-reverse;
+                transition: 5s;
             }
         }
+    }
+}
+#gallery {
+    line-height: 0;
+    -webkit-column-count: 5; /* split it into 5 columns */
+    -moz-column-count: 5;
+    column-count: 5;
+
+    column-gap: 5px;
+    -moz-column-gap: 5px;
+    -webkit-column-gap: 5px; /* give it a 5px gap between columns */
+    img {
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 5px; /* to match column gap */
+        &:hover {
+            cursor: pointer;
+            filter: contrast(110%);
+            opacity: 0.8;
+            transition: filter 1s;
+        }
+    }
+    @include media-breakpoint-down(xs) {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+    @include media-breakpoint-up(sm) {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+    @include media-breakpoint-up(md) {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+    @include media-breakpoint-up(lg) {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
     }
 }

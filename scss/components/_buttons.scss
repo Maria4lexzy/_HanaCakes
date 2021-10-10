@@ -107,12 +107,7 @@
 .social__icons-btn {
     $timing: 265ms;
 
-    @mixin transformScale($size: 1) {
-        transform: scale($size);
-        -ms-transform: scale($size);
-        -webkit-transform: scale($size);
-    }
-
+    @include transformScale;
     .social-icons {
         list-style: none;
 
@@ -144,9 +139,8 @@
             &:before {
                 @include transformScale();
                 content: "";
-                width: 60px;
-                height: 60px;
-                // background: linear-gradient(45deg, $primary, $secondary);
+                width: 3.75rem;
+                height: 3.75rem;
                 display: block;
                 transition: all $timing ease-out;
                 background: linear-gradient(145deg, #cacccf, #ffffff);
@@ -160,7 +154,7 @@
             }
 
             &:hover i {
-                @include transformScale(1.5);
+                @include transformScale(1.2);
                 transition: all $timing ease-in;
             }
 

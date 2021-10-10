@@ -1,7 +1,10 @@
-@use'../custom' as *;
+@use "../custom" as *;
 // Gradient mixin
-@mixin  gradient {
-    background:linear-gradient(to left, rgba($primary, 0.95), rgba($secondary, 0.95));    
+@mixin gradient {
+    background: linear-gradient(to left, rgba($primary, 0.95), rgba($secondary, 0.95));
+}
+@mixin gradient-reverse {
+    background: linear-gradient(to right, rgba($primary, 0.95), rgba($secondary, 0.95));
 }
 // absolute center
 @mixin absoluteCenter {
@@ -9,4 +12,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+// mixin for social media icons transform
+@mixin transformScale($size: 1) {
+    transform: scale($size);
+    -ms-transform: scale($size);
+    -webkit-transform: scale($size);
 }

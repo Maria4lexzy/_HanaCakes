@@ -12,8 +12,6 @@ window.onload = function () {
   window.onscroll = function () {
     navEffect();
     stickyHeaderEffect();
-
-
   };
 
 };
@@ -34,6 +32,7 @@ function toggleBtnEffect() {
 }
 // Add the is-sticky class to the header when you reach its scroll position. 
 //Remove "is-sticky" when you leave the scroll position
+//used in E-shop.html
 function stickyHeaderEffect() {
   var stickyHeight = sticky.offsetHeight;
 
@@ -55,7 +54,7 @@ function stickyHeaderEffect() {
     stickyWrapper.style.height = 'auto';
   }
 }
-// INCREMENT BUTTON
+// function for input type='number' to increase number of cakes
 function counter(type) {
 
   if (type == "increase") {
@@ -73,17 +72,4 @@ function counter(type) {
   }
 }
 
-// sticky div  
-// var stickyToggle = function (sticky, stickyWrapper, scrollElement) {
-//   var stickyHeight = sticky.outerHeight();
-//   var stickyTop = stickyWrapper.offset().top;
-//   if (scrollElement.scrollTop() >= stickyTop) {
-//     stickyWrapper.height(stickyHeight);
-//     sticky.addClass("is-sticky");
-//   }
-//   else {
-//     sticky.removeClass("is-sticky");
-//     stickyWrapper.height('auto');
-//   }
-// };
 

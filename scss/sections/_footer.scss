@@ -1,38 +1,37 @@
-@use '../custom' as *;
-@use '../components/mixins' as *;
+@use "../custom" as *;
+@use "../components/mixins" as *;
 
 .footer {
     padding-top: 1rem;
     background-color: $off-white;
     color: $primary;
-}
-
-// STYLE THE CONTACT-BOX CONTENT
-.contact-box {
-    &__info {
-        font-weight: 600;
-        i {
-            color: $primary;
-            font-size: 1.3rem;
-        }
-
-        &--title {
-            color: $primary;
-            text-decoration: none;
-            font-size: 0.9rem;
-
-            @include media-breakpoint-up(sm) {
-                font-size: 1.2rem;
+    // STYLE THE CONTACT-BOX CONTENT
+    .contact-box {
+        &__info {
+            font-weight: 600;
+            i {
+                color: $primary;
+                font-size: 1.3rem;
             }
-        }
 
-        &--subtitle {
-            font-size: 0.9rem;
-            color: $gray-600;
-            text-decoration: none;
+            &--title {
+                color: $primary;
+                text-decoration: none;
+                font-size: 0.9rem;
 
-            @include media-breakpoint-up(sm) {
-                font-size: 1rem;
+                @include media-breakpoint-up(sm) {
+                    font-size: 1.2rem;
+                }
+            }
+
+            &--subtitle {
+                font-size: 0.9rem;
+                color: $gray-600;
+                text-decoration: none;
+
+                @include media-breakpoint-up(sm) {
+                    font-size: 1rem;
+                }
             }
         }
     }
@@ -57,8 +56,9 @@
     }
 }
 
-//Infromacie & Kontatky
+//Infromacie & Newsletter
 .footer-info {
+    padding: 2rem;
     .footer-list {
         list-style-type: none;
         // position: relative;
@@ -75,6 +75,38 @@
                 &:hover {
                     color: $primary;
                 }
+            }
+        }
+    }
+    &__form {
+        input {
+            border-radius: 4rem;
+            color: $primary;
+            outline: none;
+            outline-style: none;
+            box-shadow: none;
+            border: 1px solid $primary;
+            &:focus {
+                outline: none;
+                outline-style: none;
+                box-shadow: none;
+                border-color: transparent;
+                border: 1px solid $secondary;
+            }
+        }
+        button {
+            border-radius: 0%;
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            border: none;
+            color: white;
+            padding: 0.8rem 1rem;
+            border: 1px solid $primary;
+            transition: 0.5s;
+            @include gradient;
+            &:hover {
+                @include gradient-reverse;
+                transition: 5s;
             }
         }
     }

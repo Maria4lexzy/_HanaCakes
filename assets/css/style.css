@@ -11215,6 +11215,11 @@ textarea.form-control-lg {
   color: #fff;
 }
 
+.social__icons-btn {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+}
 .social__icons-btn .social-icons {
   list-style: none;
 }
@@ -11245,8 +11250,8 @@ textarea.form-control-lg {
   -ms-transform: scale(1);
   -webkit-transform: scale(1);
   content: "";
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   display: block;
   transition: all 265ms ease-out;
   background: linear-gradient(145deg, #cacccf, #ffffff);
@@ -11258,9 +11263,9 @@ textarea.form-control-lg {
   transition: all 265ms ease-in;
 }
 .social__icons-btn .social-icons a:hover i {
-  transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  -webkit-transform: scale(1.5);
+  transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
   transition: all 265ms ease-in;
 }
 .social__icons-btn .social-icons a:hover .fa-facebook-f {
@@ -11516,6 +11521,23 @@ textarea.form-control-lg {
   transition: 1s;
 }
 
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #d73853 #f8f9fa;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #d73853;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #bb59b1;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-track {
+  background: #ced4da;
+}
+
 .companies__logo-box .card {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border: none;
@@ -11571,31 +11593,30 @@ textarea.form-control-lg {
   background-color: #f2eaef;
   color: #d73853;
 }
-
-.contact-box__info {
+.footer .contact-box__info {
   font-weight: 600;
 }
-.contact-box__info i {
+.footer .contact-box__info i {
   color: #d73853;
   font-size: 1.3rem;
 }
-.contact-box__info--title {
+.footer .contact-box__info--title {
   color: #d73853;
   text-decoration: none;
   font-size: 0.9rem;
 }
 @media (min-width: 576px) {
-  .contact-box__info--title {
+  .footer .contact-box__info--title {
     font-size: 1.2rem;
   }
 }
-.contact-box__info--subtitle {
+.footer .contact-box__info--subtitle {
   font-size: 0.9rem;
   color: #6c757d;
   text-decoration: none;
 }
 @media (min-width: 576px) {
-  .contact-box__info--subtitle {
+  .footer .contact-box__info--subtitle {
     font-size: 1rem;
   }
 }
@@ -11612,6 +11633,9 @@ textarea.form-control-lg {
   box-shadow: 9.91px 9.91px 15px #b73047, -9.91px -9.91px 15px #f7405f;
 }
 
+.footer-info {
+  padding: 2rem;
+}
 .footer-info .footer-list {
   list-style-type: none;
 }
@@ -11626,6 +11650,36 @@ textarea.form-control-lg {
 }
 .footer-info .footer-list li a:hover {
   color: #d73853;
+}
+.footer-info__form input {
+  border-radius: 4rem;
+  color: #d73853;
+  outline: none;
+  outline-style: none;
+  box-shadow: none;
+  border: 1px solid #d73853;
+}
+.footer-info__form input:focus {
+  outline: none;
+  outline-style: none;
+  box-shadow: none;
+  border-color: transparent;
+  border: 1px solid #bb59b1;
+}
+.footer-info__form button {
+  border-radius: 0%;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border: none;
+  color: white;
+  padding: 0.8rem 1rem;
+  border: 1px solid #d73853;
+  transition: 0.5s;
+  background: linear-gradient(to left, rgba(215, 56, 83, 0.95), rgba(187, 89, 177, 0.95));
+}
+.footer-info__form button:hover {
+  background: linear-gradient(to right, rgba(215, 56, 83, 0.95), rgba(187, 89, 177, 0.95));
+  transition: 5s;
 }
 
 .footer-bottom {
@@ -11927,6 +11981,10 @@ textarea.form-control-lg {
   }
 }
 
+.home-intro {
+  max-height: 80vh;
+}
+
 .first-eshop {
   height: 100%;
 }
@@ -11939,28 +11997,79 @@ textarea.form-control-lg {
   padding-bottom: 4rem;
   padding-top: 4rem;
 }
-.subscribe-social .subscribe-social__form input {
+.subscribe-social__form input {
   border-radius: 4rem;
   color: #bb59b1;
+}
+.subscribe-social__form input:focus {
   outline: none;
   outline-style: none;
   box-shadow: none;
+  border-color: transparent;
   border: 1px solid #bb59b1;
 }
-.subscribe-social .subscribe-social__form button {
+.subscribe-social__form button {
   border-radius: 0%;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   border: none;
-  background-color: #bb59b1;
   color: white;
-  font-weight: 600;
   padding: 0.8rem 2rem;
-  transition: all 0.4s;
-  border: 1px solid #bb59b1;
+  border: 1px solid #d73853;
+  transition: 0.5s;
+  background: linear-gradient(to left, rgba(215, 56, 83, 0.95), rgba(187, 89, 177, 0.95));
 }
-.subscribe-social .subscribe-social__form button:hover {
-  background-color: #bb59b1;
+.subscribe-social__form button:hover {
+  background: linear-gradient(to right, rgba(215, 56, 83, 0.95), rgba(187, 89, 177, 0.95));
+  transition: 5s;
+}
+
+#gallery {
+  line-height: 0;
+  -webkit-column-count: 5;
+  /* split it into 5 columns */
+  -moz-column-count: 5;
+  column-count: 5;
+  column-gap: 5px;
+  -moz-column-gap: 5px;
+  -webkit-column-gap: 5px;
+  /* give it a 5px gap between columns */
+  -moz-column-count: 1;
+  -webkit-column-count: 1;
+  column-count: 1;
+}
+#gallery img {
+  width: 100% !important;
+  height: auto !important;
+  margin-bottom: 5px;
+  /* to match column gap */
+}
+#gallery img:hover {
+  cursor: pointer;
+  filter: contrast(110%);
+  opacity: 0.8;
+  transition: filter 1s;
+}
+@media (min-width: 576px) {
+  #gallery {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+@media (min-width: 768px) {
+  #gallery {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+@media (min-width: 992px) {
+  #gallery {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
 }
 
 .blog-card-footer {
@@ -11990,6 +12099,48 @@ textarea.form-control-lg {
 .post-card p {
   text-align: justify;
   text-justify: inter-word;
+}
+
+.cart-page {
+  background-color: #f8f9fa;
+}
+
+.heading-bar {
+  padding: 1.5rem 1rem 3.5rem;
+  transition: all 0.4s cubic-bezier(0.1, 0.6, 0.2, 0.5);
+  background-color: #d73853;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.heading-bar a {
+  text-decoration: none;
+}
+.heading-bar .continue-shopping {
+  color: #ced4da;
+}
+.heading-bar .continue-shopping i {
+  padding: 0.4rem;
+  font-size: 1.2rem;
+}
+.heading-bar .hana-logo {
+  font-family: "Alex Brush", cursive;
+  font-size: 2.5rem;
+  font-weight: 560;
+  color: #e9ecef;
+}
+.heading-bar .hana-logo i {
+  font-size: 1.1rem;
+}
+
+.cart-items,
+.cart-form {
+  background-color: #fff;
+  border-radius: 0;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.cart-items ul {
+  padding: 0;
+  list-style-type: none;
 }
 
 /*# sourceMappingURL=style.css.map */

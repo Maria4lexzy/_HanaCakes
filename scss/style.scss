@@ -7,6 +7,7 @@
 @use "components/typography";
 @use "components/modals.scss";
 @use "components/cards.scss";
+@use "components/scrollbar";
 
 //Section imports
 @use "sections/collaboration-companies";
@@ -21,3 +22,4 @@
 @use "sections/e-shop";
 @use "sections/index.scss";
 @use "sections/blog.scss";
+@use "sections/cart.scss";

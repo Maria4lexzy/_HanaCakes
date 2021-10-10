@@ -1,0 +1,17 @@
+@use "../custom" as *;
+body {
+	scrollbar-width: thin;
+	scrollbar-color: $primary $gray-100;
+	&::-webkit-scrollbar-thumb {
+		background-color: $primary;
+		&:hover {
+			background: $secondary;
+		}
+	}
+	&::-webkit-scrollbar {
+		width: 5px;
+	}
+	&::-webkit-scrollbar-track {
+		background: $gray-400;
+	}
+}
