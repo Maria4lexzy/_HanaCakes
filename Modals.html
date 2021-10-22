@@ -221,7 +221,7 @@
 
 								</div>
 								<!-- START QUANTITY SELECTION -->
-								<div class="row  mt-4">
+								<div class="row  mt-4 text-center">
 									<div class="col-md-6 custom-cake-form__warning">
 										<p class="lead cursive-text"><i class="fas fa-star-of-life"></i>The Price
 											Depends
@@ -229,16 +229,14 @@
 											Configuration</p>
 									</div>
 									<div class="col-md-6 ">
-										<div class="quantity input-group w-100">
-											<button onclick="counter('decrease')" class="btn btn-minus" type="button">
-												<i class="fas fa-minus"></i>
-											</button>
-											<input id="quantity-input" min="0" name="quantity-input" value="1"
-												type="number" class="text-center" aria-label="Quantity Input Field">
-											<button onclick="counter('increase')" class="btn btn-plus" type="button">
-
-												<i class="fas fa-plus"></i>
-											</button>
+										<div class="input-group mb-3">
+											<button class="btn btn-outline-primary" type="button" id="button-addon1"><i
+													class="fas fa-minus"></i></button>
+											<input value="1" type="number" min='1' class="form-control text-center"
+												placeholder="" aria-label="quantity input"
+												aria-describedby="button-addon1">
+											<button class="btn btn-outline-primary" type="button" id="button-addon2"><i
+													class="fas fa-plus"></i></button>
 										</div>
 									</div>
 
@@ -338,24 +336,31 @@
 											architecto sint ipsam dolore tempora facere laboriosam corrupti!
 										</p>
 										<p class="lead cursive-text price ">25£</p>
-										<form class=" text-left">
-											<label for="quantity-input1" class="form-label  text-muted fw-bold">Select
-												Cake
-												Size</label>
-											<div class="quantity input-group w-100">
-												<button onclick="counter('decrease')" class="btn btn-minus"
-													type="button">
-													<i class="fas fa-minus"></i>
-												</button>
-												<input id="quantity-input1" min="0" name="quantity-input" value="1"
-													type="number" class="text-center" aria-label="Quantity Input Field">
-												<button onclick="counter('increase')" class="btn btn-plus"
-													type="button">
 
-													<i class="fas fa-plus"></i>
-												</button>
+										<!-- Quantity Selection Form -->
+										<div class="row  mt-4 text-center">
+											<div class="col-md-6 custom-cake-form__warning">
+												<p class="lead cursive-text"><i class="fas fa-star-of-life"></i>The
+													Price
+													Depends
+													on the
+													Configuration</p>
 											</div>
-										</form>
+											<div class="col-md-6 ">
+
+												<div class="input-group mb-3">
+													<button class="btn btn-outline-primary" type="button"
+														id="button-addon1"><i class="fas fa-minus"></i></button>
+													<input value="1" type="number" min='1'
+														class="form-control text-center" placeholder=""
+														aria-label="quantity input" aria-describedby="button-addon1">
+													<button class="btn btn-outline-primary" type="button"
+														id="button-addon2"><i class="fas fa-plus"></i></button>
+												</div>
+											</div>
+
+
+										</div>
 									</div>
 								</div>
 

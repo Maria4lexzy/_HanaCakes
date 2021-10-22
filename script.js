@@ -1,6 +1,5 @@
 var icon = document.getElementsByClassName("animated-icon2");
 var sticky = document.getElementById("sticky-header");
-var quantityInput = document.getElementById("quantity-input");
 var accordionContainer = document.getElementById("accordion-container");
 const stickyWrapper = document.createElement("div");
 
@@ -54,22 +53,6 @@ function stickyHeaderEffect() {
     stickyWrapper.style.height = 'auto';
   }
 }
-// function for input type='number' to increase number of cakes
-function counter(type) {
 
-  if (type == "increase") {
-    quantityInput.value++;
-    console.log(quantityInput.value);
-
-  }
-  else if (type == 'decrease') {
-    if (quantityInput.value == 1) {
-      quantityInput.value = 1;
-    }
-    else {
-      quantityInput.value--;
-    }
-  }
-}
 
 

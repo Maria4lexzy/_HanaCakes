@@ -11461,32 +11461,11 @@ textarea.form-control-lg {
   font-size: 2.5rem;
   color: #bb59b1;
 }
-
-.input-group {
-  color: #d73853;
-}
-.input-group input {
-  font-weight: 800;
-  border-color: #bb59b1;
-  color: #bb59b1;
-  width: 20%;
+.modal .input-group input {
   box-shadow: none;
 }
-.input-group input[type=number]::-webkit-inner-spin-button, .input-group input[type=number]::-webkit-outter-spin-button {
+.modal .input-group input[type=number]::-webkit-inner-spin-button, .modal .input-group input[type=number]::-webkit-outter-spin-button {
   -webkit-appearance: none;
-}
-.input-group button {
-  background-color: #bb59b1;
-  border-radius: 20%;
-  color: #fff;
-  transition: 0.4s;
-}
-.input-group button:hover {
-  background-color: #d73853;
-  color: #fff;
-}
-.input-group button:focus {
-  box-shadow: none;
 }
 
 .card {
@@ -11668,8 +11647,8 @@ body::-webkit-scrollbar-track {
 }
 .footer-info__form button {
   border-radius: 0%;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 4rem;
+  border-bottom-right-radius: 4rem;
   border: none;
   color: white;
   padding: 0.8rem 1rem;
@@ -12010,8 +11989,8 @@ body::-webkit-scrollbar-track {
 }
 .subscribe-social__form button {
   border-radius: 0%;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 4rem;
+  border-bottom-right-radius: 4rem;
   border: none;
   color: white;
   padding: 0.8rem 2rem;
@@ -12101,12 +12080,9 @@ body::-webkit-scrollbar-track {
   text-justify: inter-word;
 }
 
-.cart-page {
-  background-color: #f8f9fa;
-}
-
 .heading-bar {
   padding: 1.5rem 1rem 3.5rem;
+  height: 4rem;
   transition: all 0.4s cubic-bezier(0.1, 0.6, 0.2, 0.5);
   background-color: #d73853;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -12115,20 +12091,19 @@ body::-webkit-scrollbar-track {
   text-decoration: none;
 }
 .heading-bar .continue-shopping {
+  font-size: 1rem;
   color: #ced4da;
 }
 .heading-bar .continue-shopping i {
   padding: 0.4rem;
-  font-size: 1.2rem;
+}
+.heading-bar .continue-shopping:hover {
+  text-decoration: underline;
 }
 .heading-bar .hana-logo {
   font-family: "Alex Brush", cursive;
-  font-size: 2.5rem;
-  font-weight: 560;
+  font-weight: 660;
   color: #e9ecef;
-}
-.heading-bar .hana-logo i {
-  font-size: 1.1rem;
 }
 
 .cart-items,
@@ -12141,6 +12116,12 @@ body::-webkit-scrollbar-track {
 .cart-items ul {
   padding: 0;
   list-style-type: none;
+}
+.cart-items .input-group input {
+  box-shadow: none;
+}
+.cart-items .input-group input[type=number]::-webkit-inner-spin-button, .cart-items .input-group input[type=number]::-webkit-outter-spin-button {
+  -webkit-appearance: none;
 }
 
 /*# sourceMappingURL=style.css.map */

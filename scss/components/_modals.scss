@@ -120,34 +120,15 @@
 			color: $secondary;
 		}
 	}
-}
 
-// INPUT GROUP STYLES
-.input-group {
-	color: $primary;
-	input {
-		font-weight: 800;
-		border-color: $secondary;
-		color: $secondary;
-		width: 20%;
-		box-shadow: none;
-		&[type="number"]::-webkit-inner-spin-button,
-		&[type="number"]::-webkit-outter-spin-button {
-			-webkit-appearance: none;
-		}
-	}
-
-	button {
-		background-color: $secondary;
-		border-radius: 20%;
-		color: $white;
-		transition: 0.4s;
-		&:hover {
-			background-color: $primary;
-			color: $white;
-		}
-		&:focus {
+	// INPUT GROUP STYLES
+	.input-group {
+		input {
 			box-shadow: none;
+			&[type="number"]::-webkit-inner-spin-button,
+			&[type="number"]::-webkit-outter-spin-button {
+				-webkit-appearance: none;
+			}
 		}
 	}
 }
