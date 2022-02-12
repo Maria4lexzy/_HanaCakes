@@ -1,0 +1,41 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.alternative-intro {
+	background-color: $pink-light;
+	padding: 8rem 0 0 0;
+	width: 100%;
+	height: 100%;
+	.intros {
+		.intro__heading {
+			&--title {
+				display: inline-block;
+				font-family: "Great Vibes", cursive;
+				color: $primary;
+			}
+			&--description {
+				font-size: 1rem;
+				display: block;
+				color: $black;
+				font-weight: 450;
+				text-transform: none;
+				@include media-breakpoint-up(lg) {
+					font-size: 1rem;
+					display: inline-block;
+				}
+			}
+		}
+		&--image {
+			position: relative;
+		}
+
+		a {
+			span {
+				i {
+					font-size: 4rem;
+					color: $secondary;
+				}
+			}
+		}
+	}
+}

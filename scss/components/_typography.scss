@@ -4,23 +4,6 @@
     margin-bottom: 1rem;
     text-transform: capitalize;
     font-family: "Montserrat", sans-serif;
-
-    .intro__heading {
-        &--title {
-            display: inline-block;
-            font-family: "Great Vibes", cursive;
-        }
-        &--description {
-            font-size: 1rem;
-            display: block;
-            margin-top: 1.2rem;
-            text-transform: none;
-            @include media-breakpoint-up(lg) {
-                font-size: 1rem;
-                display: inline-block;
-            }
-        }
-    }
 }
 
 // HEADING LINE

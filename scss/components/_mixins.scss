@@ -19,3 +19,9 @@
     -ms-transform: scale($size);
     -webkit-transform: scale($size);
 }
+
+@mixin align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

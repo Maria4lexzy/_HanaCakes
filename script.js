@@ -5,15 +5,13 @@ const stickyWrapper = document.createElement("div");
 
 var stickyTop;
 
-window.onload = function () {
 
-
-  window.onscroll = function () {
-    navEffect();
-    stickyHeaderEffect();
-  };
-
+// Nav bar onScroll page effect
+window.onscroll = function () {
+  navEffect();
+  stickyHeaderEffect();
 };
+
 // Add/remove .active class to navbar on scroll
 function navEffect() {
   var navElement = document.getElementsByClassName("navbar");
@@ -52,7 +50,10 @@ function stickyHeaderEffect() {
     accordionContainer.classList.add("container");
     stickyWrapper.style.height = 'auto';
   }
+
+
 }
+
 
 
 

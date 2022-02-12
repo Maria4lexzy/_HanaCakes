@@ -1,5 +1,6 @@
 @use "../custom" as *;
-body {
+body,
+.containers {
 	scrollbar-width: thin;
 	scrollbar-color: $primary $gray-100;
 	&::-webkit-scrollbar-thumb {
@@ -10,6 +11,30 @@ body {
 	}
 	&::-webkit-scrollbar {
 		width: 5px;
+	}
+	&::-webkit-scrollbar-track {
+		background: $gray-400;
+	}
+}
+.parallax_wrapper {
+	scrollbar-width: 0;
+
+	&::-webkit-scrollbar {
+		width: 0px;
+	}
+}
+
+.containers {
+	scrollbar-width: 0;
+	scrollbar-color: yellow $gray-100;
+	&::-webkit-scrollbar-thumb {
+		background-color: green;
+		&:hover {
+			background: $secondary;
+		}
+	}
+	&::-webkit-scrollbar {
+		width: 0px;
 	}
 	&::-webkit-scrollbar-track {
 		background: $gray-400;
